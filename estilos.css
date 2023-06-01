@@ -1,0 +1,11 @@
+#interior{
+	margin-left: auto ;
+	margin-right: auto;
+	width: 940px;
+
+}
+
+#superior,#medio,#inferior{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
