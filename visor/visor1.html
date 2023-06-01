@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Visor del 404</title>
+	<style type="text/css">
+		*{margin: auto;padding: o;text-align: center;}
+		#cabecera{font: bold 1.3em verdana;background-color: #e3f2ff}/*para el tipo de letra y el background-color es para el fondo del titulo*/
+		h1{text-align: center;padding: 0.5em;}/*el padding es para el margen exterior*/
+		#menu{float: left;width: 25%; background-color: #e3f2ff;}
+		#menu img{ width: 35%; margin: 5%; cursor:pointer;}/*el cursor pointer es para que el curso se ponga como si lo seleccionara*/
+		#principal{float: left; width: 75%;}
+		#visor{width: 60%; margin: 10%;}
+		#visor img{width: 100%;}
+	</style>
+   <script type="text/javascript">
+   	window.onload=function () {
+   		visor1=document.getElementById('visor');
+   		mititulo=document.getElementById('titulo');
+   	}
+
+   	function mifoto(num){
+   		f="vi"+num+".jpg";
+   	  document.images["fotovisor"].src=f;
+   	  t=document.images["fotos"+num].alt;
+   	  mititulo.innerHTML=t;
+   	}
+
+   </script>
+
+</head>
+<body>
+   <div id="cabecera">
+   	<h1>Visor de imagenes</h1>
+   </div>
+   <div id="menu">
+      <img src="vi11.jpg" alt="Esta es la imagen 1" name="fotos1" onclick="mifoto(11)"/>
+      <img src="vi12.jpg" alt="Esta es la imagen 2" name="fotos2" onclick="mifoto(12)"/>
+      <img src="vi13.jpg" alt="Esta es la imagen 3" name="fotos3" onclick="mifoto(13)"/>
+      <img src="vi14.jpg" alt="Esta es la imagen 4" name="fotos4" onclick="mifoto(14)"/>
+      <img src="vi15.jpg" alt="Esta es la imagen 5" name="fotos5" onclick="mifoto(15)"/>    	
+   </div>
+   <div id="principal">
+   	<div id="visor">
+   		<img src="vi11.jpg" alt="Esta es la imagen 1" name="fotovisor"/>
+   	</div>
+   	<div id="titulo">
+   		Esta es la imagen 1
+   	</div>
+   </div>
+</body>
+</html>
